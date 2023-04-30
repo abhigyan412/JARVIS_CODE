@@ -6,13 +6,13 @@ import webbrowser
 import os
 import pyautogui
 import time
+import wolframalpha
 #spotify experiment
 #setting of voice 
 engine = pyttsx3.init('sapi5')
 voices= engine.getProperty('voices')
 engine.setProperty('voice',voices[1].id)
-#def send_msg(to, content):
-    #pywhatkit.sendwhatmsg('+919565167934','mummy thodi der mai call karte hain ','12','35')
+
 #setting up audio of jarvis
 def speak(audio):
     engine.say(audio)
@@ -92,14 +92,18 @@ if __name__ == '__main__':
         os.startfile(codepath)
      elif 'code' in query :  
         codepath =  "C:\\Users\\asus\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code"
-        os.startfile(codepath)   
+        os.startfile(codepath)  
+     elif 'open telegram ' in query:
+            webbrowser.open ("https://web.telegram.org/k/")    
      elif 'open whatsapp' in query:
             webbrowser.open ("https://web.whatsapp.com/")  
      #elif 'mail' :
             #webbrowser.open ("https://mail.google.com/mail/u/0/#inbox")  
      elif 'open twitter'  in query :
         webbrowser.open ("https://twitter.com/home") 
-                
+     elif 'open youtube' in query:
+            speak("Here you go to Youtube\n")
+            webbrowser.open("youtube.com")                            
      elif 'quit ' in query:
         exit()                      
 
