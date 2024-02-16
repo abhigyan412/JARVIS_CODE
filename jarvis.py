@@ -32,7 +32,7 @@ def takecommand():
     r = spr.Recognizer()
     with spr.Microphone() as source:
         print("Listening............")
-        r.pause_threshold = 1.1
+        r.pause_threshold = 0.7
         r.energy_threshold = 100
         audio  = r.listen(source)
     try:
@@ -47,6 +47,7 @@ def takecommand():
     return query
 #main logics and task             
 if __name__ == '__main__':
+    
     
     wishme()
     while True:
