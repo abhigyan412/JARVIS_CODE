@@ -27,6 +27,7 @@ def wishme():
         speak("good afternoon folks")
     else:
      speak("Good evening")
+    speak(datetime,datetime.now()) 
     speak("i am there to assist you , HOW MAY I HELP YOU !?")               
 def takecommand():
     r = spr.Recognizer()
