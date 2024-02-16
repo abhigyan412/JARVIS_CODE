@@ -22,13 +22,12 @@ def speak(audio):
 def wishme():
     hour =int( datetime.datetime.now().hour ) 
     if hour >= 5 and hour <12:
-        speak("GOOD MORNING ")
+        speak("GOOD MORNING ABHIGYAN ")
     elif hour >= 12  and hour <16:
-        speak("good afternoon folks")
+        speak("good afternoon ABHIGYAN ")
     else:
-     speak("Good evening")
-    speak(datetime,datetime.now()) 
-    speak("i am there to assist you , HOW MAY I HELP YOU !?")               
+     speak("Good evening Abhigyan")
+    speak("I am Here master , WHat's in ?")               
 def takecommand():
     r = spr.Recognizer()
     with spr.Microphone() as source:
@@ -48,6 +47,7 @@ def takecommand():
     return query
 #main logics and task             
 if __name__ == '__main__':
+    
     wishme()
     while True:
      query = takecommand().lower()
@@ -105,7 +105,7 @@ if __name__ == '__main__':
      elif 'open youtube' in query:
             speak("Here you go to Youtube\n")
             webbrowser.open("youtube.com")                            
-     elif 'quit ' in query:
+     elif 'exit ' in query:
         exit()                      
 
 
